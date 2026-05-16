@@ -46,3 +46,24 @@ window.addEventListener('load', ()) => {
     }
 
     gerenciarEstadoMenu();
+
+    // Rafael Falchi Ferreira Batista dos Santos - RM570526
+    if (togglePasswordBtn && passwordInput) {
+        togglePasswordBtn.addEventListener('click', () => {
+            const isPassword = passwordInput.getAttribute('type') === 'password';
+            passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+            togglePasswordBtn.textContent = isPassword ? '🙈' : '👁️';
+        });
+    }
+
+    function mostrarFeedback(mensagem, tipo) {
+        feedbackAlerta.textContent = mensagem;
+        feedbackAlerta.className = `alert alert-${tipo}`;
+    }
+
+    function fecharModal() {
+        const modal = bootstrap.Modal.getInstance(modalElemento);
+        if (modal) {
+            modal.hide();
+        }
+    }
