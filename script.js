@@ -67,3 +67,36 @@ window.addEventListener('load', ()) => {
             modal.hide();
         }
     }
+
+    
+    // Vitor Silva Lima da Silva - RM571124
+    if (emailInput) {
+        emailInput.addEventListener('input', () => {
+            const emailValue = emailInput.value.trim().toLowerCase();
+            
+            if (emailValue === '') {
+                modalTitulo.textContent = "Identifique-se";
+                txtBtn.textContent = "Entrar";
+                infoContexto.textContent = "Digite seu e-mail para verificar seu status.";
+                modoCadastro = false;
+                feedbackAlerta.className = "alert d-none";
+                return;
+            }
+
+            const usuarioExistente = localStorage.getItem(emailValue);
+
+            if (usuarioExistente) {
+                modalTitulo.textContent = "Conta Encontrada";
+                txtBtn.textContent = "Entrar";
+                infoContexto.innerHTML = "Este e-mail <strong>já possui cadastro</strong>. Insira a senha correta para entrar.";
+                mostrarFeedback('Atenção: Usuário já cadastrado no sistema!', 'success');
+                modoCadastro = false;
+            } else {
+                modalTitulo.textContent = "Criar sua Conta";
+                txtBtn.textContent = "Cadastrar e Entrar";
+                infoContexto.innerHTML = "Não encontramos seu e-mail. Defina uma senha para seu <strong>primeiro cadastro</strong>.";
+                feedbackAlerta.className = "alert d-none";
+                modoCadastro = true;
+            }
+        });
+    }
