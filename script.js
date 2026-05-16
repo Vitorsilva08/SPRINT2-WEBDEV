@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+window.addEventListener('load', ()) => {
     
     // Raul Kiyuna - RM569965
     const emailInput = document.getElementById('corporate-email');
@@ -15,3 +15,34 @@ window.addEventListener('load', () => {
     const menuUsuarioContainer = document.getElementById('menu-usuario-container');
 
     let modoCadastro = false;
+}
+
+// Aquilles Mello Mendonça - RM571465
+    function gerenciarEstadoMenu() {
+        const usuarioAtivo = sessionStorage.getItem('usuarioLogado');
+        
+        if (usuarioAtivo) {
+            menuUsuarioContainer.innerHTML = `
+                <li><span style="color: #00ff7f; padding: 14px 10px; display: block;">👤 ${usuarioAtivo}</span></li>
+                <li><a href="#" id="btn-logout" style="color: #ff4d4d; font-weight: bold;">[ Sair ]</a></li>
+            `;
+
+            document.getElementById('btn-logout').addEventListener('click', (e) => {
+                e.preventDefault();
+                sessionStorage.removeItem('usuarioLogado'); 
+                alert('Você saiu da sua conta.');
+                gerenciarEstadoMenu(); 
+            });
+
+        } else {
+            menuUsuarioContainer.innerHTML = `
+                <li>
+                    <a href="#" id="menu-login-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Login / Cadastro
+                    </a>
+                </li>
+            `;
+        }
+    }
+
+    gerenciarEstadoMenu();
