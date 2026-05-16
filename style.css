@@ -1,0 +1,339 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&family=Oswald:wght@200..700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+header {
+    background-color: transparent;
+    text-align: center;
+    padding: 0 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-topico {
+    background-color:#1e1e1e;
+    width:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: sans-serif;
+}
+
+#ocr { margin-top: 20px; }
+#como-faremos { margin-top: 50px; }
+#interface-visual { margin-top: 70px; }
+
+#pagina {
+    background-color: black;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+.pagina {
+    font-family: Roboto, Calibri;
+    font-size: 20px;
+    font-weight: 700;
+    color: #f7f5f5;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.titulo {
+    padding: 10px;
+    margin: 0 20px;
+    font-size: 40px;
+    color: #000000;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+#cloudcore-logo {
+    margin-top: auto;
+    width: auto;
+    height: 80px;
+    object-fit: contain;
+}
+
+.empresas img {
+    width: 10%;
+    height: 100px;
+    object-fit: contain;
+    margin: auto;
+}
+
+#parceria {
+    font-size: 50px;
+    color: #000000;
+    text-align: center;
+    margin-bottom: auto;
+    margin-top: 30px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    flex-direction:row;
+}
+
+.logo img {
+    width: 50%;
+    height: 150px;
+    object-fit: contain;
+}
+
+div {
+    text-align: center;
+}
+
+.interface {
+   display:flex;
+   justify-content: center;
+   gap: 20px;
+   align-items: center;
+   padding: 40px;
+}
+
+.midia-card img{
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.midia-card video {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.ilustracao img {
+    width: auto;         
+    height: 350px;       
+    object-fit: cover; 
+    border-radius: 10px; 
+    margin-right: 10px;
+    margin-bottom: 50px;
+}
+
+h1 {
+    font-size: 50px;
+    color: #000000;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 27px;
+    color: #f9fafa;
+    margin: 10px;
+}
+
+.topicos {
+    font-size: 27px;
+    color: #f9fafa;
+    margin: 10px;
+}
+
+p {
+    font-size: 22px;
+    margin: 20px 40px;
+    margin-bottom: 30px;
+    background-color:#252f53;
+    border-radius: 20px;
+    padding: 28px;
+}
+
+.apresentacao {
+    font-size: 22px;
+    margin: 0 70px;
+    text-align: justify;
+    font-family: sans-serif;
+    color: #f7f5f5;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e1e;
+    display: flex;
+}
+ul li a {
+  display: block;
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul li a:hover {
+  background-color: #111111;
+}
+
+ul.sticky {
+    position: sticky;
+    top: 0;
+    padding:5px;
+    z-index: 1000;
+}
+
+.containerIntro {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: justify;
+    font-family:sans-serif;
+    color: #f7f5f5;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Modal e Card estilizados para herdar propriedades limpas */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login-field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    text-align: left;
+}
+
+.login-field-group label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #475569;
+}
+
+.login-label-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.login-field-group input[type="email"],
+.login-password-wrapper input[type="password"],
+.login-password-wrapper input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    font-size: 15px;
+    color: #334155;
+    background-color: #f8fafc;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.login-field-group input[type="email"]:focus,
+.login-password-wrapper input[type="password"]:focus,
+.login-password-wrapper input[type="text"]:focus {
+    border-color: #0652dd;
+}
+
+.login-password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.login-toggle-password {
+    position: absolute;
+    right: 16px;
+    cursor: pointer;
+    color: #64748b;
+    font-size: 18px;
+    user-select: none;
+    z-index: 10;
+}
+
+.login-forgot-link {
+    font-size: 13px;
+    color: #0652dd;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-forgot-link:hover {
+    text-decoration: underline;
+}
+
+.login-remember-group {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-align: left;
+    margin-top: 5px;
+}
+
+.login-remember-group input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.login-remember-group label {
+    font-size: 14px;
+    color: #475569;
+    font-weight: 600;
+    cursor: pointer;
+    user-select: none;
+}
+
+.login-btn-submit {
+    width: 100%;
+    background-color: #0652dd; 
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    transition: background-color 0.2s;
+}
+
+.login-btn-submit:hover {
+    background-color: #0442b3;
+}
+
+.login-btn-arrow {
+    font-size: 18px;
+}
+
+.login-footer-text {
+    font-size: 14px !important;
+    color: #475569 !important;
+    text-align: center;
+    background-color: transparent !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    margin: 25px 0 0 0 !important;
+}
+
+/* Classes utilitárias dinâmicas */
+.d-none { display: none !important; }
+.alert-danger { background-color: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+.alert-success { background-color: #dcfce7; color: #166534; border: 1px solid #86efac; }

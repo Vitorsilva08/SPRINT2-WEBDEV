@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img id="cloudcore-logo" src="./imagens/CloudCore.png" alt="CloudCore">
+        <a class="titulo">CHALLENGE SPRINT 2</a>
+    </header>
+
+    <ul class="sticky" style="justify-content: space-between; align-items: center; padding: 0 20px;">
+        <!-- Lado Esquerdo do Menu -->
+        <div style="display: flex;">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="Page2.html">Projeto</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </div>
+        
+        <!-- Lado Direito (Gatilho de Login / Usuário Logado) -->
+        <div id="menu-usuario-container" style="display: flex; align-items: center;">
+            <li>
+                <a href="#" id="menu-login-link" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Login / Cadastro
+                </a>
+            </li>
+        </div>
+    </ul>
+
+    <header id="ocr" class="header-topico">
+        <h2 class="topicos">Módulo automático e OCR (Optical Character Recognition)</h2>
+    </header>
+
+    <!-- <h2>Módulo automático e OCR (Optical Character Recognition)</h2> -->
+     <header class="containerIntro"> 
+    <P>Nosso objetivo é melhorar a experiência do usuário, por isso, o módulo automático é uma funcionalidade que permite que a câmera ajuste automaticamente as configurações de acordo com o ambiente e as condições de iluminação. O OCR (Optical Character Recognition) é uma tecnologia que permite reconhecer e extrair texto de imagens, o que pode ser útil para digitalizar documentos ou traduzir textos em tempo real. Com essas funcionalidades, os usuários podem aproveitar ao máximo a qualidade da câmera dos Smartphones Jovi e ter uma experiência mais intuitiva e eficiente.
+    </P>
+   </header>
+
+    <header id="como-faremos" class="header-topico">
+        <h2 class="topicos">Como faremos isso?</h2>
+    </header>
+
+    <header class="containerIntro"> <p>Com perguntas básicas de preferências ao usuário sem utilizar termos técnicos, será feita uma configuração automática da câmera, onde o usuário pode escolher entre as opções de preferências, como: "Gosta de tirar fotos em ambientes com pouca luz?" ou "Prefere fotos com fundo desfocado?". Com base nas respostas do usuário, a câmera ajustará automaticamente as configurações para otimizar a qualidade das fotos e vídeos, proporcionando uma experiência personalizada e satisfatória.</p>
+
+    <p>Já o modo ocr será ativado automaticamente quando a câmera detectar um documento ou texto em cena, permitindo que o usuário digitalize ou traduza o texto de forma rápida e fácil, sem a necessidade de configurar manualmente as opções de OCR. Dessa forma, os usuários podem aproveitar ao máximo as funcionalidades da câmera dos Smartphones Jovi, tornando a experiência mais intuitiva e eficiente.</p>
+</header>
+    <h2 class="topicos">Imagens ilustrativas das funcionalidades</h2>
+
+    <div class="ilustracao">
+        <img src="./imagens/Sistema OCR.png" alt="Sistema OCR">
+        <img src="./imagens/Módulo automático.png" alt="Módulo automático">
+    </div>
+
+    <h1>MVP</h1>
+
+    <div class="ilustracao">
+        <img src="./imagens/MVP.jpeg" alt="MVP">
+    </div>
+
+    <footer id="pagina">
+        <a class="pagina" href="./sobre.html">Próxima página</a>
+    </footer>
+
+    <!-- Modal de Login / Cadastro -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="border-radius: 16px; overflow: hidden;">
+                <div class="modal-header" style="border-bottom: none; padding: 20px 20px 0 20px;">
+                    <h5 class="modal-title" id="modal-dinamico-titulo" style="font-weight: 700; color: #1e293b;">Identifique-se</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="padding: 20px 30px 30px 30px;">
+                    
+                    <!-- Alerta de feedback visual -->
+                    <div id="login-feedback" class="alert d-none" role="alert" style="font-size: 14px; padding: 10px; border-radius: 8px;"></div>
+
+                    <form class="login-form">
+                        <div class="login-field-group">
+                            <label for="corporate-email">Digite seu e-mail</label>
+                            <input type="email" id="corporate-email" placeholder="nome@empresa.com.br" required>
+                        </div>
+
+                        <div class="login-field-group">
+                            <div class="login-label-row">
+                                <label for="login-password">Senha</label>
+                                <a href="#" class="login-forgot-link">Esqueceu a senha?</a>
+                            </div>
+                            <div class="login-password-wrapper">
+                                <input type="password" id="login-password" placeholder="Digite sua senha" required>
+                                <span class="login-toggle-password">👁️</span>
+                            </div>
+                        </div>
+
+                        <div class="login-remember-group">
+                            <input type="checkbox" id="remember-me">
+                            <label for="remember-me">Lembrar-me</label>
+                        </div>
+
+                        <button type="submit" id="btn-submit-dinamico" class="login-btn-submit">
+                            <span id="txt-btn">Entrar</span>
+                            <span class="login-btn-arrow">&rarr;</span>
+                        </button>
+                    </form>
+
+                    <p id="info-cadastro-contexto" class="login-footer-text" style="font-size: 13px !important; margin-top: 20px !important;">
+                        Digite seu e-mail para verificar seu status.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

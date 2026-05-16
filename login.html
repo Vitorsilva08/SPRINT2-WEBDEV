@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Sprint-2 Front-End Design</title>
+</head>
+<body>
+    <header>
+        <img id="cloudcore-logo" src="./imagens/CloudCore.png" alt="CloudCore">
+        <a class="titulo">CHALLENGE SPRINT 2</a>
+    </header>
+    
+    <ul class="sticky">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Page2.html">Projeto</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="login.html">Login</a></li>
+        <!--<li><a href="About.html">Contact</a></li>  -->
+    </ul>
+
+    <div class="login-wrapper">
+        <div class="login-card">
+            <h2 class="login-title">Bem-vindo</h2>
+            <p class="login-subtitle">Acesse sua conta</p>
+
+            <form class="login-form">
+                <div class="login-field-group">
+                    <label for="corporate-email">Digite seu e-mail</label>
+                    <input type="email" id="corporate-email" placeholder="nome@empresa.com.br" required>
+                </div>
+
+                <div class="login-field-group">
+                    <div class="login-label-row">
+                        <label for="login-password">Senha</label>
+                        <a href="#" class="login-forgot-link">Esqueceu a senha?</a>
+                    </div>
+                    <div class="login-password-wrapper">
+                        <input type="password" id="login-password" value="********" required>
+                        <span class="login-toggle-password">👁️</span>
+                    </div>
+                </div>
+
+                <div class="login-remember-group">
+                    <input type="checkbox" id="remember-me">
+                    <label for="remember-me">Lembrar-me</label>
+                </div>
+
+                <button type="submit" class="login-btn-submit">
+                    Entrar 
+                    <span class="login-btn-arrow">&rarr;</span>
+                </button>
+            </form>
+
+            <p class="login-footer-text">
+                Não tem uma conta? <a href="#" class="login-signup-link">Cadastre-se</a>
+            </p>
+        </div>
+    </div>
+
+    <header id="pagina">
+        <a class="pagina" href="./sobre.html">Página anterior</a>
+    </header>
+
+    <script src="script.js"></script>
+</body>
+</html>
